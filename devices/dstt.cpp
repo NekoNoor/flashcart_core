@@ -155,6 +155,9 @@ private:
     {
         uint32_t flashchip;
 
+		if (spoofFlashchip == true)
+			return spoofedFlashchip;
+
         dstt_flash_command(0x87, 0x5555, 0xAA);
         dstt_flash_command(0x87, 0x2AAA, 0x55);
         dstt_flash_command(0x87, 0x5555, 0x90);

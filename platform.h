@@ -1,8 +1,14 @@
 #pragma once
 
 #include <cstdint>
+#include <cstddef>
 
 namespace flashcart_core {
+extern bool spoofFlashchip;
+extern const uint16_t flashchip_ids[];
+extern size_t flashchip_count;
+extern uint16_t spoofedFlashchip;
+
 enum log_priority {
     LOG_DEBUG = 0, // Will probably spam logs, only use when debugging.
     LOG_INFO, // Reccomended default logfile level
